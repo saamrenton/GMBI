@@ -1,0 +1,44 @@
+#Commented values are for use with the alternate landscape
+
+desc = "Colletotrichum lupini (lupin anthracnose)"
+
+time_step = "days"
+
+spatial_units = "m"
+
+cell_size = 50
+#cell_size = 2
+
+sentinels=[]
+
+max_time_steps = 10
+#max_time_steps = 60
+max_distance = 7500
+
+nls = 3
+tsfls = [1, 10, 20]
+
+K = [1e+6, 10000 * 50 * 50] #Assume an avg. of 10000 growing points per metre^2
+#K = [1e+6, 10000 * 2. * 2.]
+
+ips = [0, 0, 50]
+
+isl = [(75, 75)]
+#isl = [(250, 250)]
+
+sentinels = None
+
+d50 = [0.3, 0, 0] #Dispersal value from Diggle et al. assuming wind speed of 4 m/s
+d99 = [8000, 0, 0] #From Bokor et al.
+
+davg = [0., 0., 0.] #Assume a tendency for wind to the east
+dconc = [1.5, 0., 0.]
+
+arad = [0, 0, 0]
+acrit = [None, None, None]
+
+rep = [0, 0, 4 * 3] #Assume 3 wet hours per day
+allee = 0
+
+survivalT = [0.99, 0.99, 0.99]
+survivalR = [0,0,0,0]

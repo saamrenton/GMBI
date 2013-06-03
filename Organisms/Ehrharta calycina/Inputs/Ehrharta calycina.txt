@@ -1,0 +1,33 @@
+desc = "Ehrharta calycina"
+time_step = "Years"
+
+max_time_steps = 14
+max_distance = 10000
+
+spatial_units = "m"
+cell_size = 10
+
+nls = 3
+tsfls = [1, 1, 8]
+
+K = [200000, 10000, 1500]
+
+ips = [0, 0, 50]
+isl = [(120, 80)]
+
+sentinels = [(120, 80), (120, 100),(120,145),(150,200)]
+
+d50 = [4, 0, 0]
+d99 = [100, 0, 0]
+
+davg = [0, 0, 0]
+dconc = [0, 0, 0]
+
+arad = [0, 0, 0]
+acrit = [None, None, None]
+rep = [0, 0, 4000]
+
+allee = 2
+
+survivalT = [0.6, 0.1, 0.8]
+survivalR = [.0, .0, .0]

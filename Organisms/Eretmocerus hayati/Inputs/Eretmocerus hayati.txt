@@ -1,0 +1,46 @@
+#Organism description (does not affect simulation)
+desc = "Eretmocerus hayati"
+
+#Units for time steps (does not affect simulation)
+time_step = "days"
+
+max_time_steps = 120
+
+max_distance = 8000
+
+spatial_units = "m"
+
+cell_size = 16000 / 320
+
+nls = 3 + 10 #Four life stages, eggs, pupae, larvae, adult, but adults disperse every second day, so adults are split into x life stages, where 2 * x is the maximum number of days an adult would be expected to survive
+
+tsfls = [1, 14, 3] + [2] * 10 #Adults live for 8 - 21 days, so x in [4, 10]
+
+K = [1e+6] * 3 + [1e+6]
+
+ips = [0, 3e+4, 0] + [0] * 10
+
+isl = [(168, 133)]
+
+sentinels = [(270, 165), (290, 160), (300, 165)]
+
+d50 = [0, 0, 0] + [200.] * 10
+
+d99 = [0, 0, 0] + [500.] * 10
+
+davg = [0, 0, 0] + [5.47] * 10
+
+dconc = [0, 0, 0] + [1.80] * 10
+
+arad = [0, 0, 0] + [500 / 10.] * 10 #2.5 km over adult life - 2000 m total random dispersal
+
+acrit = [None, None, None] + ["max_suitability"] * 10
+
+rep = [0, 0, 0] + [110] * 10
+
+allee = 25
+#allee = 5
+
+survivalT = [0.9, 0.8, 0.7] + [0.7] * 3 + [0.7] * 3 + [0.6] * 4
+#survivalT = [1.] * (3 + 10)
+survivalR = [0.] * (3 + 10)

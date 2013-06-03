@@ -1,0 +1,15 @@
+Instructions:
+
+Landscaper
+
+1. Launch using python landscaper.py
+2. Select the landscape image you wish to use
+3. Right click to select a color
+4. From the landscape menu, select set suitability, and set the suitability for the selected color
+5. From the landscape menu, select detect regions, all regions of the selected color will be set to the current suitability
+6. Repeat for each different type of habitat
+7. From the file menu, select save array, this file can now be used by the GMBI
+
+Landscape Generator
+
+This script can be used to generate random landscapes. There's a few different types of methods it can use, and it's a bit of a mess. To use it, you need to setup a config file, there's some examples in the Landscape Tools directory.  You run it by using python landscape_generator.py --config config_file_name.

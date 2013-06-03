@@ -1,0 +1,135 @@
+#Organism description (does not affect simulation)
+desc = "Nesaecrepida_infuscata"
+
+
+#Units for time steps (does not affect simulation)
+time_step = "7 days"
+
+
+
+#Units for each grid cell (does not affect simulation)
+
+spatial_units = "m"
+
+
+
+#Width of each grid cell
+
+cell_size = 1
+
+#Maximum number of time steps that the model will run for
+
+max_time_steps = 10
+max_distance = 10000
+
+
+#Number of grid cells for the width and height of the landscape
+landscape_size = (200, 200)
+
+
+
+#Number of stages in the organism's life-cycles, juvenile and mature
+
+nls = 2
+
+
+
+#The number of time steps an individual spends in each life-stage,
+
+#21 days to mature and then 80 days for an adult. Or should it be
+
+#80 days in total, so 21 for juveniles and ~60 days for adults?
+
+tsfls = [3, 11]
+
+
+
+#The carrying capacity for each life stage, assuming 100 juveniles and 100 adults per square metre
+
+K = [100, 100]
+
+
+
+#Initial population in each life-stage
+ips = [0, 30]
+
+
+#isl = [(299, 299), (299, 300), (299, 301), (300, 299), (300, 300), (300, 301), (301, 299), (301, 300), (301, 301)]
+
+isl = [(100, 95)]
+
+#We talked about 80 m as the median distance over a period of a year, and an observed
+
+#maximum spread of ~300 m, so I've played around with a few different values
+
+#and this is what results in spread over ~300 m over a period of six months
+
+d50 = [0, 3.]
+
+
+
+#99th percentile for dispersal distances travelled by individuals in each life-stage
+
+d99 = [0, 25.]
+
+
+
+#Avg. direction for dispersal
+
+davg = [0, 3. * np.pi / 2.]
+
+
+
+#Strong concentration along the average direction of dispersal
+
+#dconc = [0, 3.]
+
+dconc = [0,0]
+
+
+
+#This is the radius that an individual considers when selecting
+
+#a cell for dispersal. It's first moved to a randomly determined cell
+
+#and from that cell, it then considers the neighbouring cells
+
+arad = [0, 3]
+
+#arad = [0, 0.]
+
+
+
+#Individuals select the cell with the maximum population, there's
+
+#no way to have this change depending on the population size at the moment
+
+acrit = [None, "max_suitability"]
+
+#acrit = [None, None]
+
+
+
+#Allee effect. We said 4 for a 50 m grid cell, so I'll assume that
+
+#allee effect is negligible in a 5 m grid cell
+
+allee = 0
+
+
+
+#Per capita reproduction rate, 3 eggs per individual per day,
+
+#but since, we're only representing females, 1.5 per individual per day
+
+rep = [0, 10.5]
+
+
+
+#Probability that an individual will survive to reach the next life-stage
+
+#50% emergence rate from eggs, 10 % of individuals survive to adulthood
+survivalT = [0.5, 0.1]
+
+
+survivalR = [0., 0.]

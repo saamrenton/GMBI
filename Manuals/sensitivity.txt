@@ -1,0 +1,14 @@
+To use the sensitivity script you need to have R installed with the sensitivity package, and also the rpy Python library.
+
+Use the sensitivity script to generate trajectories. Note that the config file has to specify the parameters to vary. Follow the example in Colletotrichumm lupini.
+
+	python sensitivity --config config_file_name --task generate
+
+This creates a trajectory file in the output directory.
+
+
+To analyse a results file
+
+	python sensitivity.py --config config_file_name --task analyse
+	
+This will generate a series of images showing the mean effect of varying each parameter and the std. deviation of the effect for each of the summary statistics; proportion of landscape covered, maximum distance, median distance, total population.
