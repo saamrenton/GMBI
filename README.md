@@ -14,5 +14,5 @@ For more information see the documents in the 'Manuals' folder:
 For license information see the License.txt file
 
 For further queries please contact the model developers
-michael.renton@uwa.edu.au
+michael.renton@uwa.edu.au OR
 david.savage@mac.com
